@@ -59,10 +59,10 @@ constructor(id, adapterProperties) {
     this.props = adapterProperties;
     // Instantiate an object from the connector.js module and assign it to an object property.
     this.connector = new ServiceNowConnector({
-    url: this.props.url,
-    username: this.props.auth.username,
-    password: this.props.auth.password,
-    serviceNowTable: this.props.serviceNowTable
+      url: this.props.url,
+      username: this.props.auth.username,
+      password: this.props.auth.password,
+      serviceNowTable: this.props.serviceNowTable
     });
 }
 
@@ -150,7 +150,7 @@ getRecord(callback) {
     * Note how the object was instantiated in the constructor().
     * get() takes a callback function.
     */
-    ServiceNowConnector.get(callback);
+    this.get(callback);
 }
 
 /**
@@ -160,6 +160,7 @@ getRecord(callback) {
 * @description Creates a record in ServiceNow.
 *
 * @param {ServiceNowAdapter~requestCallback} callback - The callback that
+
 *   handles the response.
 */
 postRecord(callback) {
@@ -169,7 +170,7 @@ postRecord(callback) {
     * Note how the object was instantiated in the constructor().
     * post() takes a callback function.
     */
-    ServiceNowConnector.post(callback);
+    this.post(callback);
 }
 }
 
