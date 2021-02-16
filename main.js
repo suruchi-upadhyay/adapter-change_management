@@ -150,12 +150,7 @@ getRecord(callback) {
      * Note how the object was instantiated in the constructor().
      * get() takes a callback function.
      */
-    ServiceNowConnector.get( (data, error) => {
-        if (error) {
-            return callback(null, error);
-        }
-        return callback(data);
-    });
+    ServiceNowConnector.get(callback);
   }
 
   /**
@@ -174,12 +169,7 @@ getRecord(callback) {
      * Note how the object was instantiated in the constructor().
      * post() takes a callback function.
      */
-    ServiceNowConnector.post( this.props, (data, error) => {
-        if (error) {
-            return callback(null, error);
-        }
-        return callback(data);
-    });
+    ServiceNowConnector.post(callback);
   }
 }
 
